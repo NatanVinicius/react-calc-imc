@@ -1,0 +1,148 @@
+body {
+    background-color: #f0f2f5;
+}
+
+.main {
+    max-width: 900px;
+    margin: 5rem auto;
+}
+
+.headerContainer img {
+    width: 150px;
+}
+
+.container {
+    display: flex;
+}
+
+.leftSide {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.rightSide {
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+}
+
+/* LEFTSIDE */
+
+.leftSide h1 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #212527;
+}
+
+.leftSide p {
+    padding-bottom: 40px;
+    color: #AAB0B5;
+    font-size: 1rem;
+    padding-bottom: 40px;
+}
+
+.leftSide input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(170,176,181, 0.5);
+}
+
+.leftSide input:disabled {
+    opacity: .5;
+}
+
+.leftSide button {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #227C9D;
+    border: none;
+    color: #FFF;
+    padding: 15px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.leftSide button:hover {
+    opacity: .8;
+}
+
+.leftSide button:disabled {
+    opacity: .5;
+}
+
+/* RIGHT SIDE */
+
+.rightSide .grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.rightSide .rightBig {
+    flex: 1;
+    display: flex;
+    position: relative;
+}
+
+.rightSide .rightBig .arrowRight {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #227C9D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -35px;
+    cursor: pointer;
+}
+
+.rightSide .rightBig .arrowRight img {
+    width: 35px;
+    height: 35px;
+}
+
+
+
+/* media querys */
+
+@media (max-width: 950px) {  
+    .main {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    
+    .container {
+        display: block;
+    }
+
+    .leftSide,
+    .rightSide {
+        margin: 40px 20px;
+    }
+
+    .rightSide .rightBig .arrowRight {
+        width: 50px;
+        height: 50px;
+        left: -25px;
+        top: 0%;
+        top: 25px;
+        left: 0;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .rightSide .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
